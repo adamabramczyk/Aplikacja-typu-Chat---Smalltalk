@@ -1,0 +1,16 @@
+.chatHeaderWrapper{
+  margin-left: 25%;
+  margin-right: 25%;
+  width: 50%;
+}
+.chatRoom{
+    margin-left: 10%;
+  margin-right: 10%;
+  min-width: 230px;
+}
+
+
+
+p {
+  font-family: Lato;
+}

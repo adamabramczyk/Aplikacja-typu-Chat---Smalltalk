@@ -1,0 +1,22 @@
+.userImg {
+  width: 200px;
+  height: auto;
+  margin: 0 auto;
+  border-radius: 8px;
+}
+.login {
+  position: absolute;
+  top: 80px;
+  left: 12vw;
+  right: 12vw;
+  /* display: flex; */
+  border: 1px solid #003539;
+  border-radius: 8px;
+  background-color: rgba(136,69,255,0.1);
+  flex-flow: column;
+  justify-content: center;
+  text-align: center;
+}
+p{
+  font-size: 10px;
+}

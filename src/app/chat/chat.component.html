@@ -1,0 +1,24 @@
+<div class="chat" [class.minimized]="isMinimized">
+
+  <div class="header">Smalltalk
+    <div class="minimize" (click)="toggle()">
+      <span *ngIf="isMinimized"><i class="fas fa-chevron-circle-up"></i></span>
+      <span *ngIf="!isMinimized"><i class="fas fa-chevron-circle-down"></i></span>
+    </div>
+  </div>
+
+  <div #container class="messages">
+    <app-chat-message *ngFor="let message of messages; last as isLast; let i = index" 
+                 [isLast]="isLast"
+                 [authorId]="authorId"
+                 [message]="message"
+                 (dblclick)="removeMessage(i)"
+                 >
+    </app-chat-message>
+  </div>
+
+  <div class="footer">
+    <textarea #texarea (keydown.enter)="sendMessage()"></textarea>
+    <button mat-raised-button (click)="sendMessage()">Send</button>
+  </div>
+</div>

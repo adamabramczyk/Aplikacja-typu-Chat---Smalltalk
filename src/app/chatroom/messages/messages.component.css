@@ -1,0 +1,19 @@
+.alert {
+    min-height: 50px; 
+}
+
+.message{
+  float: left;
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  min-width: 100px;
+}
+
+.pointer {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translate(-50%, -50%);
+}

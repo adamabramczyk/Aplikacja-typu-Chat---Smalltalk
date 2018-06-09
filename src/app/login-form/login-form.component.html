@@ -1,0 +1,48 @@
+<div *ngIf="auth.user | async; then autenticated else guest">
+	<!-- div podmieniany przez jeden z dwóch template poniżej -->
+</div>
+
+
+<section>
+	<ng-template #guest>
+		<div class="login">
+			<h4>Hey, Guest!</h4>
+			<p>You need to login to get started...</p>
+			<button class="btn btn-primary" (click)="auth.googleLogin()">
+      <i class="fa fa-google"></i> Connect Google
+    </button>
+		</div>
+	</ng-template>
+
+	<ng-template #autenticated>
+		<div *ngIf="auth.user | async as user" class="login">
+
+			<h4>Greetings, {{user.displayName}}</h4>
+			<img [src]="user.photoURL" class="userImg">
+			<p>ID: {{user.uid}}</p>
+
+			<br />
+
+			<div>
+				<span>Now you can enter the Smalltalk!</span>
+				<br />
+				<button class="btn btn-info" routerLink="../chat">Lets chat!</button>
+			</div>
+
+			<br />
+
+			<div>
+				<span>Lets check some notes!</span>
+				<br />
+				<button class="btn btn-warning" routerLink="../notes">Lets note!</button>
+			</div>
+
+			<br />
+
+			<span>See you in the future</span>
+      <br />
+			<button class="btn btn-danger" (click)="auth.signOut()">Logout</button>
+		</div>
+	</ng-template>
+
+</section>

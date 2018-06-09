@@ -1,0 +1,39 @@
+<div class="alert alert-warning" role="alert" *ngFor="let message of list">
+	<div class="message">
+		{{ message.name }}
+	</div>
+	<div class="pointer" (click)="delete(message)">
+		<i class="far fa-trash-alt"></i>
+	</div>
+	<div class="pointer mx-5" (click)="edit(message)" data-toggle="modal" data-target="#exampleModal">
+		<i class="fas fa-pencil-alt "></i>
+	</div>
+</div>
+
+
+
+<!-- Modal pop-up -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title" id="exampleModalLabel">
+					Edit message: {{editedMessage.name}}
+				</h5>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+			</div>
+			<div class="modal-body">
+				<!-- Input the same as in add-message-component.html -->
+				<form (ngSubmit)="sendEditedMessage()">
+					<input type="text" placeholder="Enter your message..." name="name" class="form-control" [(ngModel)]="editedMessage.name">
+					<button class="btn btn-warning mt-3" type="submit">Send!</button>
+				</form>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,10 @@
+<div class="message" [class.self]="message.authorId == authorId">
+	<div class="content">
+		<span *ngIf="message.authorId != authorId">
+      {{ message.authorId}}: <br />
+    </span> <p class="mx-3">{{ message.text }}</p>
+	</div>
+	<div class="time" *ngIf="isLast">
+		{{ message.timestamp | date:'h:mm:ss' }}
+	</div>
+</div>

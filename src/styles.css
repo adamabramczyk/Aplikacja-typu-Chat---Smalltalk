@@ -1,0 +1,22 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: #d81b60;
+  background-image: url(https://images.unsplash.com/photo-1525713788066-275d83a11fe5?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=967a373a119aced5b205f51f8c55f3d8&auto=format&fit=crop&w=1352&q=80);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center top;
+  background-size: auto;
+}
+
+body {
+  box-sizing: border-box;
+}
+
+* {
+  box-sizing: inherit;
+}
+
+.fill {
+  flex: 1 1 auto;
+}

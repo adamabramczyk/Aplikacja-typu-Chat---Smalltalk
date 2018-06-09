@@ -1,0 +1,15 @@
+.navbar {
+  position: absolute;
+  top: 3px;
+  left: 12vw;
+  right: 12vw;
+  padding: 10px;
+  min-width: 200px;
+  border: 1px solid #003539;
+  border-radius: 8px;
+  background-color: rgba(136,69,255,0.1);
+}
+
+.pointer {
+  cursor: pointer;
+}
